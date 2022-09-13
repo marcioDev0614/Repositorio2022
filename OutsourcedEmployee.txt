@@ -1,0 +1,20 @@
+﻿
+namespace CSharpOrientacaoObjeto.Entities2
+{
+    class OutsourcedEmployee : Employee
+    {
+        public double AdditinalCharge { get; set; }
+
+        public OutsourcedEmployee() { }
+
+        public OutsourcedEmployee(string name, int hours, double valuePerHour,double additinalCharge) : base(name,hours,valuePerHour)
+        {
+            AdditinalCharge = additinalCharge;
+        }
+
+        public override double Payment()
+        {
+            return base.Payment() + 1.1 * AdditinalCharge;
+        }
+    }
+}
