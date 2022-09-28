@@ -8,7 +8,6 @@ E:\Guit_2022\SalesWebMvc\SalesWebMvc\SalesWebMvc\bin\Debug\netcoreapp3.1\SalesWe
 E:\Guit_2022\SalesWebMvc\SalesWebMvc\SalesWebMvc\bin\Debug\netcoreapp3.1\SalesWebMvc.pdb
 E:\Guit_2022\SalesWebMvc\SalesWebMvc\SalesWebMvc\bin\Debug\netcoreapp3.1\SalesWebMvc.Views.dll
 E:\Guit_2022\SalesWebMvc\SalesWebMvc\SalesWebMvc\bin\Debug\netcoreapp3.1\SalesWebMvc.Views.pdb
-E:\Guit_2022\SalesWebMvc\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp3.1\SalesWebMvc.csproj.AssemblyReference.cache
 E:\Guit_2022\SalesWebMvc\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp3.1\SalesWebMvc.GeneratedMSBuildEditorConfig.editorconfig
 E:\Guit_2022\SalesWebMvc\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp3.1\SalesWebMvc.AssemblyInfoInputs.cache
 E:\Guit_2022\SalesWebMvc\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp3.1\SalesWebMvc.AssemblyInfo.cs

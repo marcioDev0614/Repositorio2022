@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace SalesWebMvc
 {
@@ -13,14 +14,12 @@ namespace SalesWebMvc
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            double sal = 5200;
+            double percAcre = 9.0 / 100; ;
+            double result = sal + (percAcre * sal);
+            Console.WriteLine("Valor so salário com acrescimo R$" + result.ToString("f2", CultureInfo.InvariantCulture));
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+     
     }
 }
