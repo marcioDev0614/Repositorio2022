@@ -1,0 +1,5 @@
+E:\Guit_2022\SalesWebMvc2\SalesWebMvc2\obj\Debug\netcoreapp2.1\SalesWebMvc2.csproj.AssemblyReference.cache
+E:\Guit_2022\SalesWebMvc2\SalesWebMvc2\obj\Debug\netcoreapp2.1\SalesWebMvc2.GeneratedMSBuildEditorConfig.editorconfig
+E:\Guit_2022\SalesWebMvc2\SalesWebMvc2\obj\Debug\netcoreapp2.1\SalesWebMvc2.AssemblyInfoInputs.cache
+E:\Guit_2022\SalesWebMvc2\SalesWebMvc2\obj\Debug\netcoreapp2.1\SalesWebMvc2.AssemblyInfo.cs
+E:\Guit_2022\SalesWebMvc2\SalesWebMvc2\obj\Debug\netcoreapp2.1\SalesWebMvc2.csproj.CoreCompileInputs.cache
