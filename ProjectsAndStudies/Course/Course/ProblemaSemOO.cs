@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Globalization;
 
 namespace Course
 {
-    class Program
+    class ProblemaSemOO
     {
-        static void Main_(string[] args)
+        static void Main_()
         {
             double xA, xB, xC, yA, yB, yC;
 
@@ -27,7 +29,7 @@ namespace Course
             Console.WriteLine("área de X = " + areaX.ToString("f2", CultureInfo.InvariantCulture));
             Console.WriteLine("Area de Y = " + areaY.ToString("f2", CultureInfo.InvariantCulture));
 
-            if(areaX > areaY)
+            if (areaX > areaY)
             {
                 Console.WriteLine("Maior área: X");
             }
