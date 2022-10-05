@@ -1,0 +1,14 @@
+E:\Guit_2022\ProjectsAndStudies\Course\Course\bin\Debug\netcoreapp3.1\Course.exe
+E:\Guit_2022\ProjectsAndStudies\Course\Course\bin\Debug\netcoreapp3.1\Course.deps.json
+E:\Guit_2022\ProjectsAndStudies\Course\Course\bin\Debug\netcoreapp3.1\Course.runtimeconfig.json
+E:\Guit_2022\ProjectsAndStudies\Course\Course\bin\Debug\netcoreapp3.1\Course.runtimeconfig.dev.json
+E:\Guit_2022\ProjectsAndStudies\Course\Course\bin\Debug\netcoreapp3.1\Course.dll
+E:\Guit_2022\ProjectsAndStudies\Course\Course\bin\Debug\netcoreapp3.1\Course.pdb
+E:\Guit_2022\ProjectsAndStudies\Course\Course\obj\Debug\netcoreapp3.1\Course.csproj.AssemblyReference.cache
+E:\Guit_2022\ProjectsAndStudies\Course\Course\obj\Debug\netcoreapp3.1\Course.GeneratedMSBuildEditorConfig.editorconfig
+E:\Guit_2022\ProjectsAndStudies\Course\Course\obj\Debug\netcoreapp3.1\Course.AssemblyInfoInputs.cache
+E:\Guit_2022\ProjectsAndStudies\Course\Course\obj\Debug\netcoreapp3.1\Course.AssemblyInfo.cs
+E:\Guit_2022\ProjectsAndStudies\Course\Course\obj\Debug\netcoreapp3.1\Course.csproj.CoreCompileInputs.cache
+E:\Guit_2022\ProjectsAndStudies\Course\Course\obj\Debug\netcoreapp3.1\Course.dll
+E:\Guit_2022\ProjectsAndStudies\Course\Course\obj\Debug\netcoreapp3.1\Course.pdb
+E:\Guit_2022\ProjectsAndStudies\Course\Course\obj\Debug\netcoreapp3.1\Course.genruntimeconfig.cache
