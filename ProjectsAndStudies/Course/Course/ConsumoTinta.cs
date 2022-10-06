@@ -28,7 +28,7 @@ namespace Course
                     + QtdTinta().ToString("f2", CultureInfo.InvariantCulture)+" litros";
             }
         }
-        static void Main(string[] args)
+        static void Main_(string[] args)
         {
             Console.WriteLine("***********************");
             Console.WriteLine("    Consumo de Tinta   ");
