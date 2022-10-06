@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Globalization;
 
 namespace Course
@@ -7,15 +9,14 @@ namespace Course
     {
         public string Nome;
         public double Salario;
- 
+
     }
-    class Program
+    class SalarioMedioFuncionario
     {
-        static void Main(string[] args)
+        static void Main_(string[] args)
         {
             Console.WriteLine("**************");
             Console.WriteLine("****Teste*****");
-
             Funcionario funcionario1 = new Funcionario();
             Funcionario funcionario2 = new Funcionario();
 
@@ -33,7 +34,8 @@ namespace Course
 
             double media = (funcionario1.Salario + funcionario2.Salario) / 2.0;
 
-            Console.WriteLine($"Salário medio {media.ToString("f2",CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"Salário medio {media.ToString("f2", CultureInfo.InvariantCulture)}");
+
         }
     }
 }

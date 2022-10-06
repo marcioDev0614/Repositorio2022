@@ -25,7 +25,7 @@ namespace Course
            
             }
         }
-        static void Main(string[] args)
+        static void Main_(string[] args)
         {
             Console.WriteLine("****************************");
             Console.WriteLine("****Resulta_Final_Aluno*****");
