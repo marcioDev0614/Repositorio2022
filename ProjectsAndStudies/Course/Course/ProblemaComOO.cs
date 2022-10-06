@@ -12,11 +12,18 @@ namespace Course
         public double B;
         public double C;
 
+        public double Area() // Metodo criado para facilitar e refatorar o código.
+        {
+            double p = (A + B + C) / 2.0;
+            return Math.Sqrt(p * (p - A) * (p - B) * (p - C));
+           //return raiz;
+        }
+
     }
 
     class ProblemaComOO
     {
-        static void Main_()
+        static void Main()
         {
 
 
@@ -32,11 +39,9 @@ namespace Course
             y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double p = (x.A + x.B + x.C) / 2;
-            double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
+            double areaX = x.Area(); // Chamando o metodo Area() criado dentro da classe.
 
-            p = (y.A + y.B + y.C) / 2;
-            double areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
+            double areaY = y.Area();
 
             Console.WriteLine("área de X = " + areaX.ToString("f2", CultureInfo.InvariantCulture));
             Console.WriteLine("Area de Y = " + areaY.ToString("f2", CultureInfo.InvariantCulture));
