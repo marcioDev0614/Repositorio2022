@@ -23,7 +23,7 @@ namespace Course
 
     class ProblemaComOO
     {
-        static void Main()
+        static void Main_()
         {
 
 
