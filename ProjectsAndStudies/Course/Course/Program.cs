@@ -6,7 +6,7 @@ namespace Course{
 }
 class Program
 {
-    static void Main(string[] args)
+    static void Main_(string[] args)
     {
         Console.WriteLine("**************");
         Console.WriteLine("****Teste*****");
