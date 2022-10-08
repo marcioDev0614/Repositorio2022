@@ -49,15 +49,15 @@ namespace Course
             Console.WriteLine($"Dados do Produto: {produto}");
 
             Console.Write("Digite o número de produtos a ser adicionado ao estoque: ");
-            int addProduto = int.Parse(Console.ReadLine());
-            produto.AdicionarProdutos(addProduto);
+            int qte = int.Parse(Console.ReadLine());
+            produto.AdicionarProdutos(qte);
 
             Console.WriteLine();
             Console.WriteLine($"Dados atualizados: {produto}");
 
             Console.Write("Digite o número de produtos a ser removido do estoque: ");
-            int removeProduto = int.Parse(Console.ReadLine());
-            produto.RemoverProdutos(removeProduto);
+            qte = int.Parse(Console.ReadLine());
+            produto.RemoverProdutos(qte);
 
             Console.WriteLine();
             Console.WriteLine($"Dados atualizados: {produto}");
