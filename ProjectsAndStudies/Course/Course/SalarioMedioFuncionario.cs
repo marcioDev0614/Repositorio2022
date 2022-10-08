@@ -5,7 +5,7 @@ using System.Globalization;
 
 namespace Course
 {
-    public class Funcionario
+    public class Funcionario2
     {
         public string Nome;
         public double Salario;
@@ -17,8 +17,8 @@ namespace Course
         {
             Console.WriteLine("**************");
             Console.WriteLine("****Teste*****");
-            Funcionario funcionario1 = new Funcionario();
-            Funcionario funcionario2 = new Funcionario();
+            Funcionario2 funcionario1 = new Funcionario2();
+            Funcionario2 funcionario2 = new Funcionario2();
 
             Console.WriteLine("Dados do primeiro funcionário: ");
             Console.Write("Nome: ");
