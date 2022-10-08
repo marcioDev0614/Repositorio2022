@@ -26,7 +26,7 @@ namespace Course
             return $"{Nome}, $ " + SalarioLiquido().ToString("f2", CultureInfo.InvariantCulture);
         }
 
-        static void Main()
+        static void Main_()
         {
             Funcionario3 f = new Funcionario3();
 
