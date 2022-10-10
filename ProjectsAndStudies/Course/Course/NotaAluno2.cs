@@ -15,7 +15,7 @@ namespace Course
             public double Nota3;
         }
 
-        static void Main()
+        static void Main_()
         {
             Aluno aluno = new Aluno();
             
