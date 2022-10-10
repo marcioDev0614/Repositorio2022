@@ -9,14 +9,15 @@ namespace Course
         // Para que o metodo estático seja visualizado, é necessário trocar de "static" para "public"
         // Para chamar o metodo de classe, é necessário instanciar um novo objeto no metodo Main().
         // Ex: Calcularora calc = new Calculadora();
-        public double PI = 3.14;
+        public static double PI = 3.14;
 
-        public double Volume(double r)
+        // Adicionando o "static" será possivel chamar o metodo sem precisar instanciar um novo objeto.
+        public static double Volume(double r)
         {
             return 4.0 / 3.0 * PI * r * r * r;
         }
 
-        public double Circunferencia(double r)
+        public static double Circunferencia(double r)
         {
             return 2.0 * PI * r;
         }

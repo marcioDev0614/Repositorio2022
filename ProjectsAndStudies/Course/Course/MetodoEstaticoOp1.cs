@@ -10,17 +10,17 @@ namespace Course
         static double PI = 3.14;
         static void Main()
         {
-            Calculadora calc = new Calculadora();
+           
             
             Console.Write("Entre com o valor de rario: ");
             double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double circ = calc.Circunferencia(raio);
-            double volume = calc.Volume(raio);
+            double circ = Calculadora.Circunferencia(raio);
+            double volume = Calculadora.Volume(raio);
 
             Console.WriteLine("Circunferência: " + circ.ToString("f2",CultureInfo.InvariantCulture));
             Console.WriteLine("Volume: " + volume.ToString("f2", CultureInfo.InvariantCulture));
-            Console.WriteLine("Valor de PI: " + calc.PI.ToString("f2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Valor de PI: " + Calculadora.PI.ToString("f2", CultureInfo.InvariantCulture));
         }
 
         static double Volume(double r)
