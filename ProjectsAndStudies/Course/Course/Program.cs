@@ -2,7 +2,6 @@
 using System.Globalization;
 
 namespace Course{
-
 }
 class Program
 {
@@ -11,10 +10,9 @@ class Program
         Console.WriteLine("**************");
         Console.WriteLine("****Teste*****");
 
-
-
-
-
+        
+            
+        
     }
 }
 

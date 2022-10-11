@@ -8,7 +8,7 @@ namespace Course
     class MetodoEstaticoOp1
     {
         static double PI = 3.14;
-        static void Main()
+        static void Main_()
         {
            
             
