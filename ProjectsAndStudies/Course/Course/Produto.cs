@@ -9,6 +9,15 @@ namespace Course
         public double Preco;
         public int Quantidade;
 
+        public Produto() { } // Construtor padrão
+
+        public Produto(string nome, double preco, int quantidade) // Contrutor com argumentos
+        {
+            Nome = nome;
+            Preco = preco;
+            Quantidade = quantidade;
+        }
+
         public double ValorTotalEmEstoque()
         {
             return Preco * Quantidade;
@@ -31,20 +40,22 @@ namespace Course
     }
     class Program
     {
-        static void Main_(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("**************");
             Console.WriteLine("****Teste*****");
 
-            Produto produto = new Produto();
+            //Produto produto = new Produto();
 
             Console.WriteLine("Entre com os dados do produto: ");
             Console.Write("Nome: ");
-            produto.Nome = Console.ReadLine();
+            string nome = Console.ReadLine();
             Console.Write("Preço: ");
-            produto.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.Write("Quantidade no estoque: ");
-            produto.Quantidade = int.Parse(Console.ReadLine());
+            int quantidade = int.Parse(Console.ReadLine());
+
+            Produto produto = new Produto(nome,preco,quantidade);
 
             Console.WriteLine($"Dados do Produto: {produto}");
 

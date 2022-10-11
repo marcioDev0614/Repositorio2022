@@ -7,7 +7,7 @@ namespace Course
 {
     class Executar
     {
-        static void Main()
+        static void Main_()
         {
             Console.Write("Qual é a cotação do dólar? ");
             double cotacao = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
