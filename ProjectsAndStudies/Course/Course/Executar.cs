@@ -9,15 +9,14 @@ namespace Course
     {
         static void Main()
         {
-            Console.Write("Enntre com os valores do raio: ");
-            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Qual é a cotação do dólar? ");
+            double cotacao = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Quantos dólares você vai comprar? ");
+            double qtdDolar = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double circ = Calculadora.Circunferencia(raio);
-            double volume = Calculadora.Volume(raio);
-
-            Console.WriteLine("Circunferência: " + circ.ToString("f2",CultureInfo.InvariantCulture));
-            Console.WriteLine("Volume: " + volume.ToString("f2",CultureInfo.InvariantCulture));
-            Console.WriteLine("Valor de PI: " + Calculadora.PI.ToString("f2",CultureInfo.InvariantCulture));
+            double total = ConversorMoeda.Conversor(cotacao, qtdDolar);
+            Console.WriteLine();
+            Console.WriteLine("O valor a ser pago em reais R$" + total.ToString("f2",CultureInfo.InvariantCulture));
         }
     }
 }
