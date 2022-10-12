@@ -9,23 +9,22 @@ namespace Course
         public double Preco;
         public int Quantidade;
 
-        public Produto() { } // Construtor padrão
-
-        public Produto(string nome, double preco, int quantidade) // Contrutor com argumentos
+        public Produto() { // Exemplo de contrutores usando o "this"
+            Quantidade = 10;
+       
+        } 
+        public Produto(string nome, double preco) : this() // A palavra this sinaliza que o argumento quantidade
+            // está sendo aproveitado do contrutor acima.
         {
             Nome = nome;
             Preco = preco;
+           
+        }
+        public Produto(string nome, double preco, int quantidade) : this (nome,preco) 
+            // A palavra this sinaliza que os argumentos: nome, preco está sendo aproveita do contrutor acima.
+        {
             Quantidade = quantidade;
         }
-
-        public Produto(string nome, double preco) // Exemplo de sobrecarga de construtor
-            // Onde o objeto pode receber 2 ou 3 argumentos. 
-        {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = 5; // Nessa linha o argumento "Quantidade " já começa com 5
-        }
-
         public double ValorTotalEmEstoque()
         {
             return Preco * Quantidade;
