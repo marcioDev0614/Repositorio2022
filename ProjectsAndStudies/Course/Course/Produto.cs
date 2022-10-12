@@ -3,45 +3,74 @@ using System.Globalization;
 
 namespace Course
 {
-    public class Produto
+    class Produto
     {
-        public string Nome;
-        public double Preco;
-        public int Quantidade;
-
+        private string _nome; // Sinalizando atributos como private. Onde só será possivel acessa-los
+        private double _preco; // pela propria classe. Detalhe para a convenção. O nome dos atributos, colocamos o
+        private int _quantidade; // anderline no nome "_". Metodos também teram que ser alterados os nome
+                                // colocando o _ no começo para que não haja erro na compilação.
         public Produto() { // Exemplo de contrutores usando o "this"
-            Quantidade = 10;
+            _quantidade = 10;
        
         } 
         public Produto(string nome, double preco) : this() // A palavra this sinaliza que o argumento quantidade
             // está sendo aproveitado do contrutor acima.
         {
-            Nome = nome;
-            Preco = preco;
+            _nome = nome;
+            _preco = preco;
            
         }
         public Produto(string nome, double preco, int quantidade) : this (nome,preco) 
             // A palavra this sinaliza que os argumentos: nome, preco está sendo aproveita do contrutor acima.
         {
-            Quantidade = quantidade;
+            _quantidade = quantidade;
+        }
+
+        public string GetNome() // Para que outra classe consiga acessar o nome. Será necessário 
+        {                       // inplementar o metodo Get conforme exemplo.
+            return _nome;
+        }
+
+        public double GetPreco() // Com essa inplementação, só será possivel acessar os atributos
+        {                          // atrevés do metodos e não pelo proprio atributo
+            return _preco;
+        }
+
+        public double GetQuantidade()
+        {
+            return _quantidade;
+        }
+
+        public void SetNome(string nome) // Para que seja possivel alterar o nome de uma atributo
+                                         // privado, é necessário inplementar o metodo Set conforme exemplo
+        {
+            _nome = nome;
+        }
+
+        public void SetNome2(string nome) // Exemplo de set onde há uma valição antes de realizar a
+        {                                   // alteração do valor do atributo.
+            if(nome != null && nome.Length > 1)
+            {
+                _nome = nome;
+            }
         }
         public double ValorTotalEmEstoque()
         {
-            return Preco * Quantidade;
+            return _preco * _quantidade;
         }
         public int AdicionarProdutos(int quantidade)
         {
-            return Quantidade += quantidade;
+            return _quantidade += quantidade;
         }
 
         public int RemoverProdutos(int quantidade)
         {
-            return Quantidade -= quantidade;
+            return _quantidade -= quantidade;
         }
 
         public override string ToString()
         {
-            return $"{Nome}, $ {Preco.ToString("f2",CultureInfo.InvariantCulture)}, {Quantidade} unidades, Total: $"
+            return $"{_nome}, $ {_preco.ToString("f2",CultureInfo.InvariantCulture)}, {_quantidade} unidades, Total: $"
             + ValorTotalEmEstoque().ToString("f2", CultureInfo.InvariantCulture);
         }
     }
@@ -52,35 +81,19 @@ namespace Course
             Console.WriteLine("**************");
             Console.WriteLine("****Teste*****");
 
-            //Produto produto = new Produto();
+            Produto p = new Produto("Tv",500.00,10);
 
-            Console.WriteLine("Entre com os dados do produto: ");
-            Console.Write("Nome: ");
-            string nome = Console.ReadLine();
-            Console.Write("Preço: ");
-            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine(p.GetNome()); // Acessando o atributo
 
-            Produto produto = new Produto(nome,preco); // Chamando o contrutor de 2 argumentos
+            //p.SetNome("Tv 4K"); // Alterando o valor do atributo
 
-            // Sintaxe alternativa de inicializar valores. Abrindo {} e usando as tecla ctrl + espaço
-            Produto produto2 = new Produto { Nome = "Telefone", Preco = 8500.00, Quantidade = 2 };
+            p.SetNome2("t");
 
-            Console.WriteLine($"Dados do Produto: {produto}");
+            Console.WriteLine(p.GetNome());
+            Console.WriteLine(p.GetPreco());
+            Console.WriteLine(p.GetQuantidade());
 
-            Console.Write("Digite o número de produtos a ser adicionado ao estoque: ");
-            int qte = int.Parse(Console.ReadLine());
-            produto.AdicionarProdutos(qte);
-
-            Console.WriteLine();
-            Console.WriteLine($"Dados atualizados: {produto}");
-
-            Console.Write("Digite o número de produtos a ser removido do estoque: ");
-            qte = int.Parse(Console.ReadLine());
-            produto.RemoverProdutos(qte);
-
-            Console.WriteLine();
-            Console.WriteLine($"Dados atualizados: {produto}");
-
+          
 
 
         }
