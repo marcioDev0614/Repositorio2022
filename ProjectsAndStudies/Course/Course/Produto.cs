@@ -26,26 +26,47 @@ namespace Course
             _quantidade = quantidade;
         }
 
-        public string GetNome() // Para que outra classe consiga acessar o nome. Será necessário 
-        {                       // inplementar o metodo Get conforme exemplo.
-            return _nome;
-        }
+        //public string GetNome() // Para que outra classe consiga acessar o nome. Será necessário 
+        //{                       // inplementar o metodo Get conforme exemplo.
+        //    return _nome;
+        //}
 
-        public double GetPreco() // Com essa inplementação, só será possivel acessar os atributos
-        {                          // atrevés do metodos e não pelo proprio atributo
-            return _preco;
-        }
-
-        public double GetQuantidade()
+        public double Preco // Propriedade.
         {
-            return _quantidade;
+            get { return _preco; }
+        }
+        
+        //public double GetPreco() // Com essa inplementação, só será possivel acessar os atributos
+        //{                          // atrevés do metodos e não pelo proprio atributo
+        //    return _preco;
+        //}
+
+        public string Nome // Propriedade inplementada para o atributo "Nome".
+        {                   // Com isso, sera possivel acessar o atributos diretamente e não pelo metodo
+            get { return _nome; }
+            set
+            {
+                if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
+            }
         }
 
-        public void SetNome(string nome) // Para que seja possivel alterar o nome de uma atributo
-                                         // privado, é necessário inplementar o metodo Set conforme exemplo
+        public double Quantidade // Propriedade Quantidade
         {
-            _nome = nome;
+            get { return _quantidade; }
         }
+        //public double GetQuantidade()
+        //{
+        //    return _quantidade;
+        //}
+
+        //public void SetNome(string nome) // Para que seja possivel alterar o nome de uma atributo
+        //                                 // privado, é necessário inplementar o metodo Set conforme exemplo
+        //{
+        //    _nome = nome;
+        //}
 
         public void SetNome2(string nome) // Exemplo de set onde há uma valição antes de realizar a
         {                                   // alteração do valor do atributo.
@@ -83,15 +104,19 @@ namespace Course
 
             Produto p = new Produto("Tv",500.00,10);
 
-            Console.WriteLine(p.GetNome()); // Acessando o atributo
+            Console.WriteLine(p.Nome); // Acessando o atributo
 
             //p.SetNome("Tv 4K"); // Alterando o valor do atributo
 
-            p.SetNome2("t");
+            p.Nome = "Tv 4k";
 
-            Console.WriteLine(p.GetNome());
-            Console.WriteLine(p.GetPreco());
-            Console.WriteLine(p.GetQuantidade());
+            Console.WriteLine(p.Nome);
+            Console.WriteLine(p.Preco);
+            Console.WriteLine(p.Quantidade);
+
+            //p.Preco = 800.00 // Não será possivel pois a propriedade set não foi inplementada.
+            //Console.WriteLine(p.GetPreco());
+            //Console.WriteLine(p.GetQuantidade());
 
           
 
