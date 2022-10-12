@@ -18,6 +18,14 @@ namespace Course
             Quantidade = quantidade;
         }
 
+        public Produto(string nome, double preco) // Exemplo de sobrecarga de construtor
+            // Onde o objeto pode receber 2 ou 3 argumentos. 
+        {
+            Nome = nome;
+            Preco = preco;
+            Quantidade = 5; // Nessa linha o argumento "Quantidade " já começa com 5
+        }
+
         public double ValorTotalEmEstoque()
         {
             return Preco * Quantidade;
@@ -52,10 +60,8 @@ namespace Course
             string nome = Console.ReadLine();
             Console.Write("Preço: ");
             double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Quantidade no estoque: ");
-            int quantidade = int.Parse(Console.ReadLine());
 
-            Produto produto = new Produto(nome,preco,quantidade);
+            Produto produto = new Produto(nome,preco); // Chamando o contrutor de 2 argumentos
 
             Console.WriteLine($"Dados do Produto: {produto}");
 
