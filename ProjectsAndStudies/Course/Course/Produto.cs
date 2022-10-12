@@ -63,6 +63,9 @@ namespace Course
 
             Produto produto = new Produto(nome,preco); // Chamando o contrutor de 2 argumentos
 
+            // Sintaxe alternativa de inicializar valores. Abrindo {} e usando as tecla ctrl + espaço
+            Produto produto2 = new Produto { Nome = "Telefone", Preco = 8500.00, Quantidade = 2 };
+
             Console.WriteLine($"Dados do Produto: {produto}");
 
             Console.Write("Digite o número de produtos a ser adicionado ao estoque: ");
