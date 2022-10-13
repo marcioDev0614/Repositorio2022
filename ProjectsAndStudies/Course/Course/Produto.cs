@@ -11,7 +11,7 @@ namespace Course
         // colocando o _ no começo para que não haja erro na compilação.
 
         // Auto Properties
-        private string _nome; // Nesse caso, a o atributo "Nome" não pode ser auto propretier, pois á uma lógica em sua inplementação
+        private string _nome; // Nesse caso, a o atributo "Nome" não pode ser auto propretier, pois existe uma lógica em sua inplementação
                                // No caso do Set, tem uma validação antes de realizar a alteração.
         public double Preco { get; private set; } // Só aceita leitura
         public int Quantidade { get; private set; } // Só aceita leitura
