@@ -39,7 +39,7 @@ namespace Course
             return $"Conta {Numero}, Titular: {Titular}, Saldo: $" + Saldo.ToString("f2", CultureInfo.InvariantCulture);
         }
 
-        static void Main()
+        static void Main_()
         {
 
             ContaBancaria conta;
