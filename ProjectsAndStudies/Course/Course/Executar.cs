@@ -10,16 +10,16 @@ namespace Course
         static void Main_()
         {
 
-            // Ordem sugerida para implementação de membros
+            // Modificadores de Acesso
 
-            //  Ordem sugerida
+            //Membros:
 
-            //• Atributos privados
-            //• Propriedades autoimplementadas
-            //• Construtores
-            //• Propriedades customizadas
-            //• Outros métodos da classe
-
+            //public: própria classe, subclasse no assembly, classe do assembly, subclasse fora do assembly e classe fora do assembly.
+            //protected interval: própria classe, subclasse no assembly, classe do assembly, subclasse fora do assembly.
+            //internal: própria classe, subclasse no assembly e classe do assembly.
+            //protected: própria classe e subclasse no assembly
+            //private protected: própria classe e subclasse no assembly
+            //private: própria classe
         }
     }
 }
