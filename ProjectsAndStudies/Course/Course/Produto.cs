@@ -5,37 +5,52 @@ namespace Course
 {
     class Produto
     {
-        private string _nome; // Sinalizando atributos como private. Onde só será possivel acessa-los
-        private double _preco; // pela propria classe. Detalhe para a convenção. O nome dos atributos, colocamos o
-        private int _quantidade; // anderline no nome "_". Metodos também teram que ser alterados os nome
-                                // colocando o _ no começo para que não haja erro na compilação.
-        public Produto() { // Exemplo de contrutores usando o "this"
-            _quantidade = 10;
-       
-        } 
-        public Produto(string nome, double preco) : this() // A palavra this sinaliza que o argumento quantidade
-            // está sendo aproveitado do contrutor acima.
-        {
-            _nome = nome;
-            _preco = preco;
+        //private string _nome; // Sinalizando atributos como private. Onde só será possivel acessa-los
+        //private double _preco; // pela propria classe. Detalhe para a convenção. O nome dos atributos, colocamos o
+        //private int _quantidade; // anderline no nome "_". Metodos também teram que ser alterados os nome
+        // colocando o _ no começo para que não haja erro na compilação.
+
+        // Auto Properties
+        private string _nome; // Nesse caso, a o atributo "Nome" não pode ser auto propretier, pois á uma lógica em sua inplementação
+                               // No caso do Set, tem uma validação antes de realizar a alteração.
+        public double Preco { get; private set; } // Só aceita leitura
+        public int Quantidade { get; private set; } // Só aceita leitura
+        public Produto() 
+        { // Exemplo de contrutores usando o "this"
            
         }
-        public Produto(string nome, double preco, int quantidade) : this (nome,preco) 
-            // A palavra this sinaliza que os argumentos: nome, preco está sendo aproveita do contrutor acima.
+
+        public Produto(string nome, double preco, int quantidade)
         {
-            _quantidade = quantidade;
+            Nome = nome;
+            Preco = preco;
+            Quantidade = quantidade;
         }
+
+
+        //public Produto(string nome, double preco) : this() // A palavra this sinaliza que o argumento quantidade
+        //    // está sendo aproveitado do contrutor acima.
+        //{
+        //    Nome = nome;
+        //    Preco = preco;
+
+        //}
+        //public Produto(string nome, double preco, int quantidade) : this (nome,preco) 
+        //    // A palavra this sinaliza que os argumentos: nome, preco está sendo aproveita do contrutor acima.
+        //{
+        //    _quantidade = quantidade;
+        //}
 
         //public string GetNome() // Para que outra classe consiga acessar o nome. Será necessário 
         //{                       // inplementar o metodo Get conforme exemplo.
         //    return _nome;
         //}
 
-        public double Preco // Propriedade.
-        {
-            get { return _preco; }
-        }
-        
+        //public double Preco // Propriedade.
+        //{
+        //    get { return _preco; }
+        //}
+
         //public double GetPreco() // Com essa inplementação, só será possivel acessar os atributos
         //{                          // atrevés do metodos e não pelo proprio atributo
         //    return _preco;
@@ -53,10 +68,10 @@ namespace Course
             }
         }
 
-        public double Quantidade // Propriedade Quantidade
-        {
-            get { return _quantidade; }
-        }
+        //public double Quantidade // Propriedade Quantidade
+        //{
+        //    get { return _quantidade; }
+        //}
         //public double GetQuantidade()
         //{
         //    return _quantidade;
@@ -68,30 +83,30 @@ namespace Course
         //    _nome = nome;
         //}
 
-        public void SetNome2(string nome) // Exemplo de set onde há uma valição antes de realizar a
-        {                                   // alteração do valor do atributo.
-            if(nome != null && nome.Length > 1)
-            {
-                _nome = nome;
-            }
-        }
+        //public void SetNome2(string nome) // Exemplo de set onde há uma valição antes de realizar a
+        //{                                   // alteração do valor do atributo.
+        //    if(nome != null && nome.Length > 1)
+        //    {
+        //        _nome = nome;
+        //    }
+        //}
         public double ValorTotalEmEstoque()
         {
-            return _preco * _quantidade;
+            return Preco * Quantidade;
         }
         public int AdicionarProdutos(int quantidade)
         {
-            return _quantidade += quantidade;
+            return Quantidade += quantidade;
         }
 
         public int RemoverProdutos(int quantidade)
         {
-            return _quantidade -= quantidade;
+            return Quantidade -= quantidade;
         }
 
         public override string ToString()
         {
-            return $"{_nome}, $ {_preco.ToString("f2",CultureInfo.InvariantCulture)}, {_quantidade} unidades, Total: $"
+            return $"{Nome}, $ {Preco.ToString("f2",CultureInfo.InvariantCulture)}, {Quantidade} unidades, Total: $"
             + ValorTotalEmEstoque().ToString("f2", CultureInfo.InvariantCulture);
         }
     }
