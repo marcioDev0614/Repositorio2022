@@ -9,14 +9,59 @@ namespace Course
     {
         static void Main()
         {
-            Point p;
-            p.X = 10; // Na declaração de uma struct, não é obrigado usar a "new". Mas também é uma sintaxe aceitável
-            p.Y = 20;
-            Console.WriteLine(p); // Não será possível a impressão pois no struct o valor deve ser inicializado na variével
-            p = new Point();
-            Console.WriteLine(p); // Nesse exemplo o valor será zerado pois os valores iniciam com o valor padrão.
 
-         
+            // Nullable: É um recurso de C# para que dados de tipo valor(struct) possam
+            // receber o valor null.
+
+            // Uso comum?
+            // Campo de banco de dados que podem valer nulo(data de nascimento, algum valor numérco, etc)
+            // Dados e parametros opcionais.
+
+            // Para identificar o tipo de uma variavel como nullable, adicionamos a sintaxe o 
+            // Simbolo de "?"
+            // EX:
+            double? x = null;
+            double? y = 10.0;
+
+            Console.WriteLine(x.GetValueOrDefault());// O resultado retorna o valor padrão caso não tenha valor setado. No caso é zero
+            Console.WriteLine(y.GetValueOrDefault()); // O resultado será 10
+            Console.WriteLine();
+            Console.WriteLine(x.HasValue); // Aqui ele retornar false, pois não tem valor
+            Console.WriteLine(y.HasValue); // Aqui ele retorna true
+            Console.WriteLine();
+            //Console.WriteLine(x.Value); // Aqui o resultado é uma exception. Nesse caso se faz necessário fazer uma validação antes. Exemplo
+                                        // usando um IF
+            if (x.HasValue)
+            {
+                Console.WriteLine(x.Value);
+            }
+            else
+            {
+                Console.WriteLine("X is null");
+            }
+
+            if (y.HasValue)
+            {
+                Console.WriteLine(y.Value);
+            }
+            else
+            {
+                Console.WriteLine("Y is null");
+            }
+
+            // Operador de Coalecência nula.
+            // Nesse exemplo a variável "b" que recebe o atributo de "a", Retornará o valor de 0.00 caso a seja null.
+            double? a = null;
+            double? b = 10.0;
+
+            double c = a ?? 5;
+            double d = b ?? 5;
+
+            Console.WriteLine(c);
+            Console.WriteLine(d);
+
+            
+
         }
     }
 }
