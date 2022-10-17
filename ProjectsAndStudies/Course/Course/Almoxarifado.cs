@@ -39,7 +39,7 @@ namespace Course
             return $"Id_Produto: {IDProduto}, Produto: {Produto}, SaldoEstoque: " 
             + SaldoEstoque.ToString("f2", CultureInfo.InvariantCulture);
         }
-        static void Main()
+        static void Main_()
         {
             Almoxarifado produto;
 
