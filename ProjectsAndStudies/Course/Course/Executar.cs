@@ -12,23 +12,52 @@ namespace Course
 
             // Programa para ler um número inteiro n e a altura de n pessoas. Armazenar as N alturas
             // em um vetor. Em seguida, mostrar a altura média dessas pessoas .
+
+
+            Console.WriteLine("Descobrir a média final do aluno: ");
+            Console.Write("Informe o nome do aluno: ");
+            string nome = Console.ReadLine();
+            Console.Write($"Informe a quantidade de notas : ");
+            int qtdNotas = int.Parse(Console.ReadLine());
+
+            double[] notas = new double[qtdNotas];
+
+            for(int i = 0; i < qtdNotas; i++)
+            {
+                Console.Write($"Nota: {i}: ");
+                notas[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                
+            }
+
+            double sumNotas = 0.0;
+            for(int i = 0; i < qtdNotas; i++)
+            {
+                sumNotas += notas[i];
+            }
+
+            double media = sumNotas / 3;
+            string result = media >= 7.0 ? "Aprovado" : "Reprovado";
+            Console.WriteLine();
+            Console.WriteLine($"Aluno: {nome}\nMédia: " + media.ToString("f2",CultureInfo.InvariantCulture) 
+                                +"\nResultado Final: " + result);
             
-            int n = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Programa para ler a média de altura");
+            //int n = int.Parse(Console.ReadLine());
+            //double[] vect = new double[n];
 
-            double[] vect = new double[n]; // Instanciando um vetor
-            for(int i = 0; i < n; i++) // Laço de repetição
-            {
-                vect[i] = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
-            }
+            //for(int i = 0; i < n; i++)
+            //{
+            //    vect[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //}
 
-            double sum = 0.0; // Criando uma variavel para acumular o vetor.
-            for(int i = 0; i < n; i++)
-            {
-                sum += vect[i]; // recebendo o valor do vetor
-            }
+            //double sum = 0.0;
+            //for(int i = 0; i < n; i++)
+            //{
+            //    sum += vect[i];
+            //}
 
-            double avg = sum / n;
-            Console.WriteLine("AVEREGTH HEIGHT = " + avg.ToString("F2",CultureInfo.InvariantCulture));
+            //double avg = sum / n;
+            //Console.WriteLine("Média: " + avg.ToString("f2",CultureInfo.InvariantCulture));
 
         }
     }
