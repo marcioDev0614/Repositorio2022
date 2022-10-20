@@ -10,34 +10,15 @@ namespace Course
         static void Main()
         {
 
-            Rent[] vect = new Rent[10];
-            Console.Write("Quantos quartos serão alugados? ");
-            int n = int.Parse(Console.ReadLine());
+            int s1 = Calculator.SumInt(2, 3);
+            int s2 = Calculator.SumInt(4, 5, 8);
+            Console.WriteLine("Metodo não recomendado: " + s1);
+            Console.WriteLine("Metodo não recomendado: " + s2);
 
-            for (int i = 1; i <= n; i++)
-            {
-                Console.WriteLine();
-                Console.WriteLine($"Aluguel #{i}:");
-                Console.Write("Nome: ");
-                string nome = Console.ReadLine();
-                Console.Write("Email: ");
-                string email = Console.ReadLine();
-                Console.Write("Quarto: ");
-                int quarto = int.Parse(Console.ReadLine());
-
-                vect[quarto] = new Rent { Nome = nome, Email = email };
-
-            }
-            Console.WriteLine();
-            Console.WriteLine("Quartos ocupados: ");
-            for (int i = 0; i < 10; i++)
-            {
-                if (vect[i] != null)
-                {
-                    Console.WriteLine(i + ": " + vect[i]);
-                }
-            }
-
+            int s3 = Calculator.SumIntVetor(new int[] { 10, 10, 2 });
+            Console.WriteLine("Metodo não tão recomendado " + s3);
+            int s4 = Calculator.SumIntVetorParans(15,78,78,12);
+            Console.WriteLine("Resultado via metodo Params: " + s4);
 
 
             // Programa para ler um número inteiro n e a altura de n pessoas. Armazenar as N alturas
