@@ -9,20 +9,21 @@ namespace Course
     {
         static void Main()
         {
+            // Laço foreach - sintaxe opcional e simplificada para percorrer coleções
 
-            // Boxing: É um processo de conversão de um objeto tipo valor para um objeto tipo referência compativível
-            // Ex:
+            string[] vect = new string[] { "Marcio", "Jouze" };
+            foreach(var nomes in vect) // 
+            {
+                Console.WriteLine(nomes);
+            }
 
-            int x = 20;
-            object obj = x; // Exemplo de boxing
-            Console.WriteLine(obj);
+            Console.WriteLine("--------------------------");
 
-            // Unboxing: É um processo de conversão de um objeto tipo referência para um objeto tipo valor compátivel
-            // EX:
+            for(int i = 0; i < vect.Length; i++) // Mesmo resultado do foreach usand o for
+            {
+                Console.WriteLine(vect[i]);
+            }
 
-            int y = (int)obj; // Exemplo de Unboxing. Onde será necessário fazer um casting pois se isso não fo feito
-                              // o compilador não irá aceitar
-            Console.WriteLine(y);
 
 
         }
