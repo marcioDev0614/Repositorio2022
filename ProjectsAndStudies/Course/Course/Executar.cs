@@ -9,10 +9,21 @@ namespace Course
     {
         static void Main()
         {
-            int a = 10;
-            //Calculator.Triple(ref a); // Camando o metodo sem o out ou ref, o valor não será multiplicado
-            Calculator.Triple(ref a); // Adicionando o "ref", o valor declararo será multiplicado.
-            Console.WriteLine(a);
+
+            // Boxing: É um processo de conversão de um objeto tipo valor para um objeto tipo referência compativível
+            // Ex:
+
+            int x = 20;
+            object obj = x; // Exemplo de boxing
+            Console.WriteLine(obj);
+
+            // Unboxing: É um processo de conversão de um objeto tipo referência para um objeto tipo valor compátivel
+            // EX:
+
+            int y = (int)obj; // Exemplo de Unboxing. Onde será necessário fazer um casting pois se isso não fo feito
+                              // o compilador não irá aceitar
+            Console.WriteLine(y);
+
 
         }
     }
