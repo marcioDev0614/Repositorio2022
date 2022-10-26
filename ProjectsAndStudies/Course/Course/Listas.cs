@@ -8,7 +8,7 @@ namespace Course
 {
     class Listas
     {
-        static void Main()
+        static void Main_()
         {
             // Lista é uma estrutura de dados
             // Homogênea (dados do mesmo tipo)
@@ -65,7 +65,8 @@ namespace Course
                 Console.WriteLine(obj);
             }
 
-
+            list.RemoveAt(3);// Remover de uma determinada posição
+            list.RemoveRange(2, 2); // Remover o elemento em sua posição + 2 elementos
         }
     }
 }
