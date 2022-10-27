@@ -39,7 +39,7 @@ namespace Course
             Salario = Salario + (Salario * poncentagem / 100.0);
         }
 
-        static void Main()
+        static void Main_()
         {
             Console.WriteLine("***********************");
             Console.WriteLine("Cadastro de Empregados.");
