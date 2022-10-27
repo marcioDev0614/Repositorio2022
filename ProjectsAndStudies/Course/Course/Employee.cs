@@ -30,7 +30,7 @@ namespace Course
             return Id + ", " + Name + ", " + Salary.ToString("f2", CultureInfo.InvariantCulture);
         }
 
-        static void Main()
+        static void Main_()
         {
             Console.Write("How many employees will be registered? ");
             int n = int.Parse(Console.ReadLine());
