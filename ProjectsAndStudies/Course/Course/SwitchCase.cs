@@ -6,7 +6,7 @@ namespace Course
 {
     class SwitchCase
     {
-        static void Main()
+        static void Main_()
         {
             Console.Write("Informe o valor para o dia da semana entre 1 e 7: ");
             int x = int.Parse(Console.ReadLine());

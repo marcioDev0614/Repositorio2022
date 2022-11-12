@@ -41,6 +41,7 @@ namespace Course
             Console.Write("Informe a altura da parede: ");
             area.Altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+            Console.WriteLine();
             Console.WriteLine(area);
 
         }
