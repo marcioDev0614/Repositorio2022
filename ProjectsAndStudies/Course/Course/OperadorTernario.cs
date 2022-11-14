@@ -7,7 +7,7 @@ namespace Course
 {
     class OperadorTernario
     {
-        static void Main()
+        static void Main_()
         {
             Console.Write("Informe o preco: ");
             double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
