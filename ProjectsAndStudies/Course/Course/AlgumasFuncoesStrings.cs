@@ -7,7 +7,7 @@ namespace Course
     class AlgumasFuncoesStrings
     {
 
-        static void Main()
+        static void Main_()
         {
             string original = "abcde FGHIJ ABC abc DEFG   ";
 
