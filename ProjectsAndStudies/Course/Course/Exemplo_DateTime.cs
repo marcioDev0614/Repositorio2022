@@ -7,7 +7,7 @@ namespace Course
 {
     class Exemplo_DateTime
     {
-        static void Main()
+        static void Main_()
         {
             DateTime d1 = DateTime.Now;
             Console.WriteLine(d1); // Retorna a data e hora atual do sistema
