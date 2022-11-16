@@ -6,7 +6,7 @@ namespace Course
 {
     class E_TimeSpan
     {
-        static void Main()
+        static void Main_()
         {
             
             TimeSpan t1 = new TimeSpan(1,33,25);
