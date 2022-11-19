@@ -6,7 +6,7 @@ namespace Course
 {
     class Propriedades_DateTime
     {
-        static void Main()
+        static void Main_()
         {
             DateTime d = new DateTime(2022, 11, 16, 18, 36, 55, 275);
             Console.WriteLine(d);
@@ -51,11 +51,11 @@ namespace Course
             DateTime d4 = d1.AddDays(7);
             Console.WriteLine("Vencimento do Boleto:  " + d4);
 
-            DateTime data1 = new DateTime(2022,11,16,19,26,55);
+            DateTime data1 = new DateTime(2022,11,17,11,00,55);
             Console.WriteLine(data1);
             DateTime sgo = data1.AddDays(5);
             Console.WriteLine(sgo);
-            DateTime sgoRetomada = sgo.AddHours(7);
+            DateTime sgoRetomada = sgo.AddHours(2);
             Console.WriteLine(sgoRetomada);
             TimeSpan dif = sgo.Subtract(sgoRetomada);
             Console.WriteLine(dif);
