@@ -6,7 +6,7 @@ namespace Course
 {
     class Prorpiedades_TimeSpan
     {
-        static void Main()
+        static void Main_()
         {
             TimeSpan t1 = TimeSpan.MaxValue;
             TimeSpan t2 = TimeSpan.MinValue;
