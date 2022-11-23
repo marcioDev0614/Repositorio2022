@@ -49,7 +49,7 @@ namespace Course.Entities
           
         }
 
-        static void Main()
+        static void Main_()
         {
             Comment c1 = new Comment("Have a nice trip!");
             Comment c2 = new Comment("Wow that's awesome!");
