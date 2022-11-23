@@ -17,7 +17,7 @@ namespace Course.Entities
             return "Pedido: " + Id + ", Data: " + Moment + ", Status: " + Status;
         }
 
-        static void Main()
+        static void Main_()
         {
             Order pedido = new Order { Id = 25, Moment = DateTime.Now, Status = OrderStatus.Processing };
 
