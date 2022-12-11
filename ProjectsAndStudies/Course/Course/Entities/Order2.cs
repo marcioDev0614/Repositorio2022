@@ -58,7 +58,7 @@ namespace Course.Entities
             return sb.ToString();
         }
 
-        static void Main()
+        static void Main_()
         {
             Console.WriteLine("Enter cliente data: ");
             Console.Write("Name: ");
